@@ -22,9 +22,9 @@ yum install salt-ssh -y
 yum install salt-cloud -y
 #Enabling Salt services at OS Level
 #sudo systemctl enable salt-master.service
-sudo systemctl enable salt-minion.service
+chkconfig salt-minion on
 #Start Salt Service
-sudo systemctl start salt-minion.service
+service salt-minion start
 #Install Salt dependencies
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 sudo python2.6 ez_setup.py
